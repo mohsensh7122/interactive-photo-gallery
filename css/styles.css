@@ -1,3 +1,5 @@
+/**** Colors ****/
+/**** Transitions ****/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -58,14 +60,114 @@ table {
   margin: 0;
 }
 
-.search-input {
+body {
+  background: #2A2E37;
+}
+
+.search {
+  width: 50px;
+  height: 50px;
+  background-color: #242628;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin: 50px auto;
+}
+.search:before {
+  content: "";
   display: block;
-  width: 300px;
-  padding: 10px 40px;
-  margin: 0 auto;
-  border: 2px solid grey;
-  border-radius: 5px;
-  margin-bottom: 35px;
+  width: 3px;
+  height: 100%;
+  position: relative;
+  background-color: #00FEDE;
+  transition: all 0.5s ease;
+}
+.search.open {
+  width: 420px;
+}
+.search.open:before {
+  height: 30px;
+  margin: 10px 0 20px 30px;
+  position: absolute;
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 20px 100px 20px 45px;
+  font-size: 30px;
+}
+.search-box:focus {
+  outline: none;
+}
+
+.search-button {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 3px solid #00FEDE;
+  display: block;
+  position: relative;
+  margin-left: 42px;
+  bottom: 12px;
+  transition: all 0.5s ease;
+}
+.search-icon:before {
+  content: "";
+  width: 3px;
+  height: 8px;
+  position: absolute;
+  right: -3px;
+  top: 13px;
+  display: block;
+  background-color: #00FEDE;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.search-icon:after {
+  content: "";
+  width: 3px;
+  height: 8px;
+  position: absolute;
+  right: -8px;
+  top: 18px;
+  display: block;
+  background-color: #00FEDE;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.open .search-icon {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+.open .search-icon:before {
+  transform: rotate(52deg);
+  right: 15px;
+  top: 13px;
+  height: 18px;
+}
+.open .search-icon:after {
+  transform: rotate(-230deg);
+  right: 15px;
+  top: 3px;
+  height: 18px;
 }
 
 .container {
@@ -81,10 +183,120 @@ table {
   grid-gap: 20px;
 }
 
+.pic {
+  border: 2px solid #00FEDE;
+  border-radius: 5px;
+}
+
 .img-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.search {
+  width: 50px;
+  height: 50px;
+  background-color: #242628;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.search:before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 100%;
+  position: relative;
+  background-color: #00FEDE;
+  transition: all 0.5s ease;
+}
+.search.open {
+  width: 420px;
+}
+.search.open:before {
+  height: 30px;
+  margin: 10px 0 20px 30px;
+  position: absolute;
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 20px 100px 20px 45px;
+  font-size: 30px;
+}
+.search-box:focus {
+  outline: none;
+}
+
+.search-button {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 3px solid #00FEDE;
+  display: block;
+  position: relative;
+  margin-left: 42px;
+  bottom: 12px;
+  transition: all 0.5s ease;
+}
+.search-icon:before {
+  content: "";
+  width: 3px;
+  height: 8px;
+  position: absolute;
+  right: -3px;
+  top: 13px;
+  display: block;
+  background-color: #00FEDE;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.search-icon:after {
+  content: "";
+  width: 3px;
+  height: 8px;
+  position: absolute;
+  right: -8px;
+  top: 18px;
+  display: block;
+  background-color: #00FEDE;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.open .search-icon {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.open .search-icon:before {
+  transform: rotate(52deg);
+  right: 15px;
+  top: 13px;
+  height: 18px;
+}
+.open .search-icon:after {
+  transform: rotate(-230deg);
+  right: 15px;
+  top: 3px;
+  height: 18px;
 }
 
 /*# sourceMappingURL=styles.css.map */
